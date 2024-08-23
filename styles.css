@@ -17,7 +17,7 @@
 :root {
     /*** Layout ***/
     --main-width: 330px;
-    --height: 100vh;
+    --height: 120vh;
 
     /*** Colors ***/
     --wrong-red:  #ff7f7f;
