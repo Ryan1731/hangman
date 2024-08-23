@@ -1,8 +1,6 @@
-Here's a README for your Hangman project:
+# Hangman Game
 
 ---
-
-# Hangman Game
 
 A classic Hangman game implemented using HTML, CSS, and JavaScript. Players try to guess the hidden word by selecting letters within a limited number of incorrect guesses.
 
@@ -22,5 +20,3 @@ A classic Hangman game implemented using HTML, CSS, and JavaScript. Players try 
 2. Open `index.html` in your browser.
 
 Enjoy the game!
-
----
