@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/517e100b5b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <h1 class="title">HANGMAN</h1>
+        <br>
+        <div class="wrapper">
+            <div class="container">
+                <div class="start-menu" id="start-menu">
+                    <div class="start-menu-wrapper">
+                        <h2>PRESS START</h2>
+                        <button id="start-btn">START</button>
+                    </div>
+                </div>
+                <div class="top-wrapper" id="top-wrapper">
+                    <div class="tries-display" id="tries-display">Tries Left: 8</div>
+                    <div class="timer-display" id="timer-display">0:59</div>
+                    <div class="output" id="output"></div>
+                    <canvas id="hangman-graphic" width="100" height="300"></canvas>
+                </div>
+                <div class="middle-wrapper">
+                    <div id="category-display"></div>
+                    <button class="hint" id="hint-btn">Hint (2/2)</button>
+                </div>
+                <div class="bottom-wrapper">
+                    <div id="word-display">
+                    </div>
+                    <div class="keyboard" id="keyboard">
+                        <button>A</button>
+                        <button>B</button>
+                        <button>C</button>
+                        <button>D</button>
+                        <button>E</button>
+                        <button>F</button>
+                        <button>G</button>
+                        <button>H</button>
+                        <button>I</button>
+                        <button>J</button>
+                        <button>K</button>
+                        <button>L</button>
+                        <button>M</button>
+                        <button>N</button>
+                        <button>O</button>
+                        <button>P</button>
+                        <button>Q</button>
+                        <button>R</button>
+                        <button>S</button>
+                        <button>T</button>
+                        <button>U</button>
+                        <button>V</button>
+                        <button>W</button>
+                        <button>X</button>
+                        <button>Y</button>
+                        <button>Z</button>
+                    </div>
+                </div>
+            </div>
+            <div class="info-wrapper">
+                <details class="accordion" id="how-to-play" open>
+                    <summary>How to play</summary>
+                    Guess the hidden word by entering one letter at a time. You have 8 guesses. If time runs out or you use up all your guesses, you lose. Have fun!
+                </details>
+                <details class="accordion" id="settings-details-el" disabled>
+                    <summary>Settings</summary>
+                    <div class="settings-option">
+                        <div class="toggle-wrapper">
+                            <input type="checkbox"  id="bg-music-checkbox" class="toggle-checkbox" checked>
+                            <div class="toggle-container">
+                                <div class="toggle-button"> 
+                                </div>
+                            </div>
+                        </div>
+                        <p>Background Music</p>
+                    </div>
+                    
+                </details>
+                <details class="accordion">
+                    <summary>Social</summary>
+                    <div class="social-icons-container">
+                        <div class="parallelogram"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="parallelogram"><i class="fa-brands fa-discord"></i></div>
+                        <div class="parallelogram"><i class="fa-brands fa-instagram"></i></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Made in Singapore. <a href="#">Github</a></p>
+        </footer>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

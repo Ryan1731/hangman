@@ -1,0 +1,398 @@
+/*** Google Fonts ***/
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+/*** CSS Reset ***/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Electrolize", sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*** Website Styles ***/
+:root {
+    /*** Layout ***/
+    --main-width: 330px;
+    --height: 100vh;
+
+    /*** Colors ***/
+    --wrong-red:  #ff7f7f;
+    --black: rgb(5, 6, 8);
+    --green: rgb(156, 230, 170);
+    --purple: rgb(68, 43, 104);
+    --light-grey: rgba(255, 255, 255, 0.663);
+
+    /*** Toggle UI ***/
+    --toggle-container-width: 40px;
+    --toggle-container-height: 23px;
+}
+
+/*** Body ***/
+body {
+    padding: 20px;
+    width: 100vw;
+    height: var(--height);
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: var(--main-width);
+}
+
+/*** General Styles ***/
+a {
+    color: var(--green);
+}
+
+/*** Title ***/
+.title {
+    color: var(--light-grey);
+    border-bottom: 2px solid var(--green);
+    font-size: 2.5rem;
+}
+
+/*** Details ***/
+details[disabled] summary,
+details.disabled summary {
+    pointer-events: none; /* prevents click events */
+    user-select: none; /* prevents text selection */
+}
+
+/*** How to Play ***/
+.accordion {
+    padding: 10px;
+    margin: 20px 0;
+    border: 3px solid var(--green);
+    color: var(--light-grey);
+    cursor: pointer;
+    user-select: none;
+    transition: [open] 3s ease-out; 
+}
+
+summary {
+    color: var(--green);
+}
+
+.accordion[open] summary {
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+
+/*** Social Icons ***/
+.social-icons-container > div {
+    display: inline-block;
+    margin: 0px -15px;
+}
+
+.parallelogram {
+    width: 100px;
+    height: 50px;
+    border: 2px solid var(--green);
+    position: relative;
+    transform: scale(0.6);
+    text-align: center;
+    padding-top: 4px;
+}
+
+.parallelogram::after {
+    content: "";
+    width: 25px;
+    height: 56px;
+    border-right: 2px solid var(--green);
+    background-color: var(--black);
+    position: absolute;
+    left: -13px;
+    top: -11px;
+    transform: rotate(30deg);
+}
+
+.parallelogram::before {
+    content: "";
+    width: 25px;
+    height: 56px;
+    border-left: 2px solid var(--green);
+    background-color: var(--black);
+    position: absolute;
+    right: -13px;
+    bottom: -11px;
+    transform: rotate(30deg);
+}
+
+.parallelogram > i {
+    color: var(--green);
+    font-size: 2rem;
+    
+}
+
+/*** Settings ***/
+.settings-option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.toggle-wrapper {
+    position: relative;
+    width: var(--toggle-container-width);
+    display: inline-block;
+}
+
+.toggle-container {
+    width: var(--toggle-container-width);
+    height: var(--toggle-container-height);
+    border: 1px solid black;
+    background-color: var(--light-grey);
+    position: relative;
+    transform: scale(0.9);
+}
+
+.toggle-button {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.toggle-checkbox {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: var(--toggle-container-width);
+    height: var(--toggle-container-height);
+}
+
+.toggle-checkbox:checked + .toggle-container {
+    background-color: var(--green);
+}
+
+.toggle-checkbox:checked + .toggle-container .toggle-button {
+    left: calc(var(--toggle-container-width) * 0.5);
+}
+
+/*** Game Container ***/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--main-width);
+    min-width: 330px;
+    border: 2px solid var(--green);
+    background-color: var(--black);
+    position: relative;
+}
+
+/*** Start Menu ***/
+.start-menu {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.start-menu h2 {
+    color: var(--light-grey);
+    font-size: 2rem;
+}
+
+.start-menu button {
+    color: var(--black);
+    padding: 10px;
+    background-color: var(--green);
+    border-radius: 3px;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.start-menu button:hover {
+    background-color: #7BEA7B;
+}
+
+/*** Top Wrapper ***/
+.top-wrapper {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(156, 230, 170);
+}
+
+.top-wrapper .tries-display {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 1.2rem;
+}
+
+.top-wrapper .timer-display {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.2rem;
+}
+
+.top-wrapper .output {
+    position: absolute;
+    bottom: 15px;
+    right: 130px;
+}
+
+/*** Middle Wrapper ***/
+.middle-wrapper {
+    border-bottom: 2px solid var(--green);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+#category-display {
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hint {
+    background-color: var(--purple);
+    color: var(--green);
+    border: 0px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    height: 40px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+/*** Bottom Wrapper ***/
+
+/*** Word Display ***/
+#word-display {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    border-bottom: 2px solid black;
+    padding: 40px;
+}
+
+.character {
+    border-bottom: 2px solid var(--green);
+    height: 1.4rem;
+    width: 1.4rem;
+    text-align: center;
+    user-select: none;
+    color: var(--green);
+    font-size: 1.2rem;
+}
+
+/*** Keyboard ***/
+.keyboard {
+    width: 100%;
+    padding: 0px 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keyboard > button {
+    background-color: var(--purple);
+    color: var(--green);
+    border: 0px;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.keyboard > button.wrong:disabled {
+    border: 2px solid red;
+    font-weight: bold;
+    color: red;
+}
+
+.keyboard > button.right:disabled {
+    border: 2px solid rgb(52, 239, 52);
+    color: rgb(52, 239, 52);
+    font-weight: bold;
+}
+
+/*** Footer ***/
+footer {
+    margin-top: 30px;
+    border-top: 2px solid var(--green);
+    width: 100%;
+    height: 30px;
+    color: var(--light-grey);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+/*** Media Queries for Screen Width ***/
+@media screen and (max-width: 370px){
+    main, .container {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    :root {
+        --main-width: 100%;
+    }
+}
+
+@media screen and (min-width: 700px){
+    :root {
+        --main-width: 700px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    details {
+        min-width: 330px !important;
+    }
+    .container {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (min-width: 900px){
+    main {
+        transform: scale(1.2);
+    }
+}
