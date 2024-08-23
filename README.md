@@ -1,7 +1,5 @@
 # Hangman Game
 
----
-
 A classic Hangman game implemented using HTML, CSS, and JavaScript. Players try to guess the hidden word by selecting letters within a limited number of incorrect guesses.
 
 ## Features
