@@ -1,7 +1,7 @@
 // Constants
 const MAX_HINTS = 2;
 const MAX_TRIES = 8;
-const TOTAL_TIME = 59;
+const TOTAL_TIME = 1000;
 
 // HTML Elements
 const elements = 
